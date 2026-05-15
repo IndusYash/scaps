@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: solar-dashboard
+    env: docker
+    plan: free
+    branch: main
+    autoDeploy: true
+    buildCommand: null
+    startCommand: null
+    envVars:
+      - key: PORT
+        value: "8501"
+    pullRequestPreviews: false
