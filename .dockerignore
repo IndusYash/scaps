@@ -1,0 +1,12 @@
+.venv
+env
+__pycache__
+.pytest_cache
+.ipynb_checkpoints
+.git
+.gitignore
+*.pyc
+.DS_Store
+venv/
+instance/
+node_modules/

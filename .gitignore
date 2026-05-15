@@ -1,0 +1,26 @@
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+.idea/
+.env
+instance/
+node_modules/
+dist/
+build/
+*.egg-info/
+
+# Ignore residue folder with notebooks and outputs
+residue/
+
+# Catch any nested __pycache__ directories
+**/__pycache__/
+
+# Optional: ignore large data files (uncomment if you keep data out of repo)
+# Data_file.xlsx
+# *.xlsx
