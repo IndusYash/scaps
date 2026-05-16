@@ -164,18 +164,14 @@ def render() -> None:
         """
         <div class="hero">
             <h1>Interface Density Notebook App</h1>
-            <p>This view mirrors interface1.ipynb: interface-density J-V, QE, Responsivity, model training, predictions, and actual-vs-predicted curves.</p>
+            <p>Welcome to the Interface Density Sheet based ML Pipeline.</p>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-    _, upload_col = st.columns([2.2, 1.8])
-    with upload_col:
-        uploaded = st.file_uploader("Data File (.xlsx)", type=["xlsx"])
-
     try:
-        excel_bytes, data_source = load_excel_bytes(uploaded)
+        excel_bytes, data_source = load_excel_bytes(None)
     except FileNotFoundError:
         st.error("Data_file.xlsx not found. Upload an xlsx file.")
         return

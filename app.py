@@ -9,6 +9,7 @@ from interface_dashboard import render as render_interface_dashboard
 from htl_dashboard import render as render_htl_dashboard
 from pvk_dashboard import render as render_pvk_dashboard
 from temperature_dashboard import render as render_temperature_dashboard
+from optimized_dashboard import render as render_optimized_dashboard
 
 
 def main() -> None:
@@ -42,6 +43,7 @@ def main() -> None:
             "Interface Density",
             "Defect Density",
             "Donor Con",
+            "Optimized",
         ],
         index=0,
     )
@@ -58,8 +60,10 @@ def main() -> None:
         render_interface_dashboard()
     elif selected_dashboard == "Defect Density":
         render_defect_dashboard()
-    else:
+    elif selected_dashboard == "Donor Con":
         render_donor_dashboard()
+    else:
+        render_optimized_dashboard()
 
 
 if __name__ == "__main__":

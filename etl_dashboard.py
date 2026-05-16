@@ -121,19 +121,15 @@ def render() -> None:
     st.markdown(
         """
         <div class="hero">
-            <h1>ETL1 Notebook App</h1>
-            <p>This view mirrors etl1.ipynb only: J-V, QE, Responsivity, validations, point predictions, and comparison curves.</p>
+            <h1>ETL Notebook App</h1>
+            <p>Welcome to the ETL Sheet based ML Pipeline</p>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-    _, top_right = st.columns([2.2, 1.8])
-    with top_right:
-        uploaded = st.file_uploader("Data File (.xlsx)", type=["xlsx"])
-
     try:
-        excel_bytes, data_source = load_excel_bytes(uploaded)
+        excel_bytes, data_source = load_excel_bytes(None)
     except FileNotFoundError:
         st.error("Data_file.xlsx not found. Upload an xlsx file.")
         return
